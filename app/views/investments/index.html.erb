@@ -1,0 +1,39 @@
+<h1>Listing investments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Description</th>
+      <th>Acquiredvalue</th>
+      <th>Acquireddate</th>
+      <th>Recentvalue</th>
+      <th>Recentdate</th>
+      <th>Created</th>
+      <th>Modified</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @investments.each do |investment| %>
+      <tr>
+        <td><%= investment.category %></td>
+        <td><%= investment.description %></td>
+        <td><%= investment.acquiredvalue %></td>
+        <td><%= investment.acquireddate %></td>
+        <td><%= investment.recentvalue %></td>
+        <td><%= investment.recentdate %></td>
+        <td><%= investment.created %></td>
+        <td><%= investment.modified %></td>
+        <td><%= link_to 'Show', investment %></td>
+        <td><%= link_to 'Edit', edit_investment_path(investment) %></td>
+        <td><%= link_to 'Destroy', investment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Investment', new_investment_path %>

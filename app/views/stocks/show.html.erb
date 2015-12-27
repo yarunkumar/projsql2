@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stsymbol:</strong>
+  <%= @stock.stsymbol %>
+</p>
+
+<p>
+  <strong>Stname:</strong>
+  <%= @stock.stname %>
+</p>
+
+<p>
+  <strong>Noshares:</strong>
+  <%= @stock.noshares %>
+</p>
+
+<p>
+  <strong>Purchaseprice:</strong>
+  <%= @stock.purchaseprice %>
+</p>
+
+<p>
+  <strong>Datepurchased:</strong>
+  <%= @stock.datepurchased %>
+</p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @stock.created %>
+</p>
+
+<p>
+  <strong>Modified:</strong>
+  <%= @stock.modified %>
+</p>
+
+<%= link_to 'Edit', edit_stock_path(@stock) %> |
+<%= link_to 'Back', stocks_path %>

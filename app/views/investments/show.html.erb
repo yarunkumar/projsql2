@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @investment.category %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @investment.description %>
+</p>
+
+<p>
+  <strong>Acquiredvalue:</strong>
+  <%= @investment.acquiredvalue %>
+</p>
+
+<p>
+  <strong>Acquireddate:</strong>
+  <%= @investment.acquireddate %>
+</p>
+
+<p>
+  <strong>Recentvalue:</strong>
+  <%= @investment.recentvalue %>
+</p>
+
+<p>
+  <strong>Recentdate:</strong>
+  <%= @investment.recentdate %>
+</p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @investment.created %>
+</p>
+
+<p>
+  <strong>Modified:</strong>
+  <%= @investment.modified %>
+</p>
+
+<%= link_to 'Edit', edit_investment_path(@investment) %> |
+<%= link_to 'Back', investments_path %>

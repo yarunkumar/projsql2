@@ -1,0 +1,37 @@
+<h1>Listing stocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stsymbol</th>
+      <th>Stname</th>
+      <th>Noshares</th>
+      <th>Purchaseprice</th>
+      <th>Datepurchased</th>
+      <th>Created</th>
+      <th>Modified</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stocks.each do |stock| %>
+      <tr>
+        <td><%= stock.stsymbol %></td>
+        <td><%= stock.stname %></td>
+        <td><%= stock.noshares %></td>
+        <td><%= stock.purchaseprice %></td>
+        <td><%= stock.datepurchased %></td>
+        <td><%= stock.created %></td>
+        <td><%= stock.modified %></td>
+        <td><%= link_to 'Show', stock %></td>
+        <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
+        <td><%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stock', new_stock_path %>
